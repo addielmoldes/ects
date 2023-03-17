@@ -115,12 +115,14 @@ ul {
 .card {
     padding: 10px;
     border: 1px solid var(--back_color_3);
-    border-radius: 5px;
+    border-radius: 5px;    
+    transition: transform .2s ease;
 }
 
 .card:hover {
     box-shadow: 0 0 5px 1px var(--back_color_3);
-    transition: .1s ease all;
+    /* transition: .1s ease all; */
+    transform: scale(1.05);
 }
 
 .card-image {
