@@ -71,10 +71,21 @@ ul {
 }
 
 .home-button {
+    display: inline;
+    align-items: center;
     font-size: 2rem;
     padding: 10px;
     border: 2px solid white;
     border-radius: 5px;
+    transition: background-color .5s;
+}
+.home-button:hover{
+    background-color: white;
+    color: gray;
+    border: 2px solid gray;
+}
+.home-button:hover>svg{
+    fill: gray;
 }
 
 .topics-container {
