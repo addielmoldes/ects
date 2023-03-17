@@ -1,5 +1,7 @@
 :root {
     --back_color_1: rgb(18, 18, 49);
+    --back_color_2: rgb(27, 27, 63);
+    --back_color_3: rgb(225, 225, 243);
 }
 
 * {
@@ -18,7 +20,6 @@ a {
 ul {
     list-style: none;
 }
-
 body {
     padding: 0;
     margin: 0;
@@ -78,7 +79,7 @@ ul {
 
 .topics-container {
     padding: 20px;
-    background-color: var(--back_color_1);
+    background-color: var(--back_color_3);
 }
 
 .content {
@@ -101,12 +102,12 @@ ul {
 
 .card {
     padding: 10px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--back_color_3);
     border-radius: 5px;
 }
 
 .card:hover {
-    box-shadow: 0 0 5px 1px lightgray;
+    box-shadow: 0 0 5px 1px var(--back_color_3);
     transition: .1s ease all;
 }
 
@@ -114,7 +115,9 @@ ul {
     border-radius: 5px;
 }
 
-.card-title {}
+.card-title {
+    color: var(--back_color_2);
+}
 
 .card-footer {
     padding: 2px;
@@ -124,10 +127,11 @@ ul {
     margin-top: 2px;
     margin-bottom: 4px;
     height: 50px;
+    color: var(--back_color_2);
 }
 
 .card-button {
-    color: black;
+    color: var(--back_color_2);
     text-align: center;
     padding: 4px;
     display: block;
@@ -135,13 +139,34 @@ ul {
 }
 
 .card-button:hover {
-    color: white;
+    color: var(--back_color_1);
     transition: .3s ease all;
-    background-color: var(--back_color_1);
+    background-color: var(--back_color_3);
 }
 
 footer {
     color: white;
-    padding: 20px;
+    background-color: var(--back_color_2);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.footer-links,
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copy{
+    text-align: center;
     background-color: var(--back_color_1);
+    padding: 10px;
+}
+.footer-copy > a:hover{
+    text-decoration: underline;
+    transition: .5s ease all;
 }
