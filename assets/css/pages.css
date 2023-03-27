@@ -1,3 +1,18 @@
 header {
     background-image: url('../images/background_5.webp');
 }
+
+.content{
+    margin: 0;
+}
+
+.container{
+    padding: 30px;
+}
+.subtopic-title{
+    font-size: larger;
+    font-weight: bold;
+}
+.subtopic{
+    padding-left: 25px;
+}
