@@ -1,8 +1,8 @@
 :root {
     --back_color_1: #09091b;
     --back_color_2: #151526;
-    --back_color_3: rgb(225, 225, 243);
-    --back_color_4: #0f0f2c;
+    --back_color_3: #e1e1f3;
+    --back_color_4: #09091b7c;
 }
 
 * {
@@ -40,10 +40,12 @@ header {
 
 .header-container {
     height: 100%;
-    backdrop-filter: blur(10px) brightness(0.5);
+    backdrop-filter: blur(10px) brightness(0.3);
 }
 
 nav {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,21 +53,29 @@ nav {
     padding-inline: 50px;
     color: white;
     font-size: 1.7rem;
+    background-color: var(--back_color_4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 5px 0 var(--back_color_2);
+    z-index: 999;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-links {
     display: flex;
     gap: 50px;
-    /* margin: 100px; */
+    margin: 0;
     padding: 0;
 }
 
 .home-title {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     top: 50%;
+    /* left: 50%; */
     transform: translateY(-100%);
     color: white;
     font-size: 3.5rem;
@@ -74,7 +84,11 @@ nav {
 
 .home-button-container {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .home-button {
@@ -83,7 +97,7 @@ nav {
     font-size: 2rem;
     padding: 10px;
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 50%;
     transition: background-color .5s;
 }
 
@@ -97,7 +111,7 @@ nav {
     mix-blend-mode: difference;
 }
 
-.topics-container {
+main {
     padding: 20px;
     background-color: var(--back_color_3);
 }
@@ -204,14 +218,13 @@ nav {
     position: sticky;
     display: flex;
     align-items: center;
-    right: 10px;
     bottom: 10px;
     float: right;
     padding: 10px;
     z-index: 999;
     border: 2px solid var(--back_color_3);
     mix-blend-mode: difference;
-    border-radius: 5px;
+    border-radius: 50%;
 }
 
 footer {
@@ -273,16 +286,5 @@ footer {
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .footer-links {
-        display: block;
-    }
-
-    .footer-links>a {
-        display: inline;
-        margin-right: 10px;
     }
 }
