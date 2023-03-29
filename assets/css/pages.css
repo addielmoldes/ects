@@ -3,11 +3,11 @@ header {
 }
 
 .content{
-    margin: 0;
+    margin: 0 0 20px 0;
 }
 
 .container{
-    padding: 30px;
+    padding: 15px;
 }
 .subtopic-title{
     font-size: larger;
@@ -15,4 +15,8 @@ header {
 }
 .subtopic{
     padding-left: 25px;
+}
+
+.biblio{
+    margin-bottom: -15px;
 }
