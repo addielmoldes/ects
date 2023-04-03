@@ -1,22 +1,138 @@
+ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 header {
     background-image: url('../images/background_5.webp');
 }
 
-.content{
+.body-content {
+    display: flex;
+    background-color: var(--back_color_3);
+}
+
+main {
+    width: 80%;
+}
+
+aside {
+    width: 20%;
+    padding: 20px 20px 20px 0px;
+    height: max-content;
+    /* background-color: var(--back_color_3); */
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.aside-links {
+    color: var(--back_color_1);
+}
+
+.aside-links:hover {
+    text-decoration: underline;
+}
+
+.aside-links:active{
+    font-weight: bold;
+    color: var(--back_color_1);
+}
+
+.aside-links-container {
+    margin-bottom: 10px;
+}
+
+.content {
     margin: 0 0 20px 0;
 }
 
-.container{
+.container {
     padding: 15px;
 }
-.subtopic-title{
+
+.subtopic-title {
     font-size: larger;
     font-weight: bold;
 }
-.subtopic{
-    padding-left: 25px;
+
+.subtopic {
+    padding-left: 20px;
 }
 
-.biblio{
-    margin-bottom: -15px;
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.biblio {
+    margin-bottom: 0px;
+}
+
+.biblio-links {
+    color: blue;
+}
+
+blockquote {
+    background-color: var(--back_color_5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.more-images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 795px) {
+    aside {
+        display: none;
+    }
+
+    .body-content {
+        display: block;
+    }
+
+    main {
+        width: auto;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+
+    .subtopic {
+        padding-left: 0;
+    }
+
+    .more-images {
+        flex-direction: column;
+    }
+
+    blockquote {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

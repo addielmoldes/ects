@@ -3,6 +3,7 @@
     --back_color_2: #151526;
     --back_color_3: #e1e1f3;
     --back_color_4: #09091b7c;
+    --back_color_5: #e1e1f362;
 }
 
 * {
@@ -19,15 +20,12 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-}
-
 body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: var(--back_color_3); */
 }
 
 header {
@@ -73,6 +71,7 @@ nav {
     gap: 50px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .home-title {
@@ -143,6 +142,7 @@ main {
 
 .topic-cards,
 .apk-container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-basis: 20%;
@@ -218,15 +218,16 @@ main {
 }
 
 .floating-button {
-    position: fixed;
+    position: sticky;
     right: 10px;
+    float: right;
     bottom: 10px;
     border: 1px solid;
     padding: 10px;
     border-radius: 50%;
     display: flex;
     align-items: center;
-    mix-blend-mode: difference  ;
+    mix-blend-mode: difference;
 }
 
 footer {
