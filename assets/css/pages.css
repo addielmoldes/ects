@@ -3,6 +3,10 @@ ol {
     padding-left: 20px;
 }
 
+ol>li {
+    word-break: break-all;
+}
+
 figure {
     display: flex;
     flex-direction: column;
@@ -43,7 +47,7 @@ aside {
     text-decoration: underline;
 }
 
-.aside-links:active{
+.aside-links:active {
     font-weight: bold;
     color: var(--back_color_1);
 }
@@ -78,6 +82,7 @@ aside {
 
 .biblio {
     margin-bottom: 0px;
+    width: 100%;
 }
 
 .biblio-links {
