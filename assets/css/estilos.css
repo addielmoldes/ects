@@ -30,7 +30,7 @@ body {
 
 header {
     height: 100vh;
-    background-image: url('../images/background_3.jpg');
+    background-image: url('../images/nova.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -52,10 +52,10 @@ nav {
     padding-inline: 50px;
     color: white;
     font-size: 1.7rem;
-    background-color: var(--back_color_4);
+    background-color: var(--back_color_1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 1px 5px 0 var(--back_color_2);
+    /* box-shadow: 0 1px 5px 0 var(--back_color_2); */
     z-index: 999;
 }
 
@@ -64,6 +64,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 5px;
+}
+
+.menu {
+    display: none;
+}
+
+.logo {
+    border-radius: 50%;
 }
 
 .nav-links {
@@ -265,7 +273,17 @@ footer {
 
 @media (max-width: 795px) {
     nav {
-        justify-content: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu {
+        display: inline;
+    }
+
+    .menu>svg {
+        display: flex;
     }
 
     .ects-link {
@@ -273,11 +291,14 @@ footer {
     }
 
     .nav-back {
-        justify-content: left;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .nav-links {
-        margin-right: 0;
+        /* margin-right: 0; */
+        display: none;
     }
 
     .home-title {
