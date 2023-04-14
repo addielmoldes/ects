@@ -284,6 +284,7 @@ footer {
 
     .menu>svg {
         display: flex;
+        align-items: center;
     }
 
     .ects-link {
